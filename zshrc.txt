@@ -1,0 +1,55 @@
+POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
+POWERLEVEL9K_MODE='nerdfont-complete'
+
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+# POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status history time date battery command_execution_time php_version node_version laravel_version root_indicator)
+
+POWERLEVEL9K_CONTEXT_SUDO_BACKGROUND='green'
+POWERLEVEL9K_DIR_SHOW_WRITABLE=true
+POWERLEVEL9K_BATTERY_ICON='\uf1e6'
+# POWERLEVEL9K_USER_ICON="\uF415"
+POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND='245'
+
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="\n"
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX=" \uf101 "
+# POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%K{white}%F{black} `date +%T` \UE12E %f%k%F{white}?%f "
+
+POWERLEVEL9K_CARRIAGE_RETURN_ICON="\uf071"
+
+POWERLEVEL9K_HOME_ICON="\ufb26"
+
+POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=1
+source $HOME/antigen.zsh
+    
+# Load the oh-my-zsh's library
+antigen use oh-my-zsh
+
+# Auto Complete
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
+
+# Git
+antigen bundle git
+antigen bundle git-extras
+antigen bundle git-flow
+# NPM
+antigen bundle npm
+
+# Dir Colors
+antigen bundle joel-porquet/zsh-dircolors-solarized.git
+
+# Load the theme
+# antigen theme robbyrussell
+
+antigen theme bhilburn/powerlevel9k powerlevel9k
+
+# Tell antigen that you're done
+antigen apply
+
+# dircolors ~/colors/dircolors-solarized/dircolors.256dark
+
+alias projects="/mnt/d/webdevelopment/"
