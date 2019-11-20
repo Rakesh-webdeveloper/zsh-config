@@ -40,7 +40,7 @@ POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND='black'
 POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND='blue'
 POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=0
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs command_execution_time)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon user dir vcs command_execution_time)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status ssh root_indicator dir_writable background_jobs history time date battery)
 
 POWERLEVEL9K_CARRIAGE_RETURN_ICON="\uf071"
@@ -57,7 +57,45 @@ alias mvfangpub="cd /var/www/html/mvf-angular-public"
 alias storm="cd /home/new2/Desktop/PhpStorm-2018.3.4/bin && ./phpstorm.sh"
 alias l2="cd /var/www/pratice/laravel2"
 
-
 # Projects
 alias projects="cd /var/www/projects/"
 alias list="tree -L 1"
+alias cls="clear"
+
+# NgInx
+alias ngxstatus="sudo service nginx status"
+alias ngxstart="sudo service nginx start" 
+alias ngxstop="sudo service nginx stop"
+alias ngxreload="sudo service nginx reload"
+alias ngxrestart="sudo service nginx restart"
+alias ngxenable="sudo service nginx enable" # start up at boot
+alias ngxdisable="sudo service nginx disable" # stop at boot
+
+# Apache2
+alias a2status="sudo service apache2 status"
+alias a2start="sudo service apache2 start"
+alias a2stop="sudo service apache2 stop"
+alias a2restart="sudo service apache2 restart"
+alias a2reload="sudo service apache2 reload"
+
+# PHP
+alias enphp7.2="a2enmod php7.2"
+alias disphp7.2="a2dismod php7.2"
+alias enphp7.0="a2enmod php7.2"
+alias disphp7.0="a2dismod php7.2"
+
+# Mongo
+alias m4start="sudo service mongod start"
+alias m4stop="sudo service mongod stop"
+alias m4restart="sudo service mongod restart"
+
+# git 
+alias grmlock="rm -f .git/index.lock"
+
+# Check network tables listening sockets.
+# systemctl restart nginx
+# netstat -tlpn| grep nginx
+# ss -tlpn| grep nginx
+# 
+# # vi /etc/nginx/sites-enabled/default  [On Debian/Ubuntu]
+# sudo ufw status
